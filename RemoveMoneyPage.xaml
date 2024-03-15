@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonopolyGUI.RemoveMoneyPage"
+             Title="RemoveMoneyPage">
+    <VerticalStackLayout>
+        <Label 
+            x:Name="RemoveMoneyLabel"
+            Text="Penz levonasa"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Padding="10"
+            FontSize="20"/>
+
+        <ListView
+            x:Name="PlayersList"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            ItemSelected="PlayersList_ItemSelected" />
+
+        <Label
+            x:Name="RemoveMoneyCommLabel"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="20"
+            IsVisible="False" />
+
+        <Entry
+            x:Name="MoneyEntry"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Completed="OnRemoveMoneyClicked"
+            IsVisible="False" 
+            TextChanged="MoneyEntry_TextChanged"/>
+
+        <Button
+            x:Name="MoneyRemoveBtn"
+            Text="Penz levonasa"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            IsVisible="False"
+            Clicked="OnRemoveMoneyClicked"
+            Margin="13"/>
+
+        <HorizontalStackLayout
+            x:Name="MoneyButtons"
+            HorizontalOptions="Center"
+            Spacing="10"
+            IsVisible="False">
+            <VerticalStackLayout
+                Spacing="5">
+                <Button
+                    x:Name="Plus10KBtn"
+                    Text="+ 10K"
+                    Clicked="Plus10KBtn_Clicked"/>
+                <Button
+                    x:Name="Plus100KBtn"
+                    Text="+ 100K"
+                    Clicked="Plus100KBtn_Clicked"/>
+                <Button
+                    x:Name="Plus500kBtn"
+                    Text="+ 500k"
+                    Clicked="Plus500KBtn_Clicked"/>
+                <Button
+                    x:Name="Plus1MBtn"
+                    Text="+ 1M"
+                    Clicked="Plus1MBtn_Clicked"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout
+                Spacing="5">
+                <Button
+                    x:Name="Minus10KBtn"
+                    Text="- 10K"
+                    Clicked="Minus10KBtn_Clicked"/>
+                <Button
+                    x:Name="Minus100KBtn"
+                    Text="- 100K"
+                    Clicked="Minus100KBtn_Clicked"/>
+                <Button
+                    x:Name="Minus500kBtn"
+                    Text="- 500k"
+                    Clicked="Minus500kBtn_Clicked"/>
+                <Button
+                    x:Name="Minus1MBtn"
+                    Text="- 1M"
+                    Clicked="Minus1MBtn_Clicked"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+
+        <Button
+            Text="Jatekmenu"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="OnGameClicked"
+            Margin="20"/>
+    </VerticalStackLayout>
+</ContentPage>

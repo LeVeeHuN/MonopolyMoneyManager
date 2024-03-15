@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonopolyGUI.StartMoneyPage"
+             Title="StartMoneyPage">
+    <VerticalStackLayout>
+        <Label 
+            x:Name="StartMoneyLabel"
+            Text="Start mezo"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Padding="10"
+            FontSize="20"/>
+
+        <ListView
+            x:Name="PlayersList"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            ItemTapped="PlayersList_ItemTapped"/>
+
+        <Label
+            x:Name="EnsureLabel"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="20"
+            IsVisible="False"
+            Padding="25"/>
+
+        <HorizontalStackLayout
+            x:Name="EnsureBtnHolder"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            IsVisible="False"
+            Spacing="20">
+
+            <Button
+                x:Name="EnsureOkBtn"
+                Text="Igen"
+                Clicked="EnsureOkBtn_Clicked"/>
+            <Button
+                x:Name="EnsureNoBtn"
+                Text="Nem"
+                Clicked="EnsureNoBtn_Clicked"/>
+
+        </HorizontalStackLayout>
+
+        <Button
+            Text="Jatekmenu"
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            Clicked="OnGameClicked"
+            Margin="20"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonopolyGUI.GamePage"
+             Title="GamePage">
+    <VerticalStackLayout>
+        <Label 
+            x:Name="GameNameLabel"
+            Text="Szivecske"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Padding="20"
+            FontSize="20"/>
+
+        <Label
+            x:Name="Player1Label"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            IsVisible="False" />
+
+        <Label
+            x:Name="Player2Label"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            IsVisible="False" />
+
+        <Label
+            x:Name="Player3Label"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            IsVisible="False" />
+
+        <Label
+            x:Name="Player4Label"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            IsVisible="False"/>
+
+        <Label
+            x:Name="SpacingLabel1"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Padding="5" />
+
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Padding="15"
+            Spacing="30">
+
+            <Button
+                x:Name="TransferBtn"
+                Text="Utalas"
+                WidthRequest="110"
+                Clicked="OnTransferClicked"/>
+
+            <Button
+                x:Name="StartBtn"
+                Text="Start" 
+                WidthRequest="110"
+                Clicked="OnStartClicked"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Spacing="30">
+
+            <Button
+                x:Name="AddBtn"
+                Text="Hozzaadas" 
+                WidthRequest="110"
+                Clicked="OnAddMoneyClick"/>
+
+            <Button
+                x:Name="RemoveBtn"
+                Text="Levonas" 
+                WidthRequest="110"
+                Clicked="OnRemoveMoneyClicked"/>
+
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
